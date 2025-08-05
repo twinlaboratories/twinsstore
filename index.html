@@ -8,17 +8,13 @@
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-
     <!-- 3D Model Viewer -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            /* Font updated to Helvetica Neue, with fallbacks */
+            font-family: 'Helvetica Neue', 'Inter', sans-serif;
             overflow-x: hidden;
             background-color: #000;
         }
@@ -98,7 +94,7 @@
         .scroller-btn.right { right: 1rem; }
     </style>
 </head>
-<body class="bg-black text-white">
+<body class="bg-black text-red-500">
 
     <!-- Video Background -->
     <video autoplay muted loop playsinline id="bg-video" onerror="this.style.display='none'; console.error('Video file not found or failed to load.')">
@@ -126,7 +122,7 @@
           <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
         </svg>
 
-        <svg id="pause-icon" class="hidden-icon" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <svg id="pause-icon" class="hidden-icon text-white" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
         </svg>
     </div>
@@ -173,15 +169,15 @@
 
             <!-- Product Details -->
             <div class="flex flex-col">
-                <button onclick="showHomePage()" class="text-gray-400 hover:text-red-500 self-start mb-4 transition-colors">&larr; Back</button>
+                <button onclick="showHomePage()" class="hover:text-red-400 self-start mb-4 transition-colors">&larr; Back</button>
                 <h2 class="text-4xl font-bold mb-4">TURMERIC necklace</h2>
-                <ul class="text-gray-300 mb-6 text-lg font-bold list-disc list-inside space-y-2">
+                <ul class="mb-6 text-lg font-bold list-disc list-inside space-y-2">
                     <li>limited edition</li>
                     <li>solid stainless steel</li>
                     <li>18 inch stainless steel necklace</li>
                     <li>free entry to the TURMERIC parties</li>
                 </ul>
-                <div class="text-5xl font-bold mb-8">£25.99</div>
+                <div class="text-5xl font-bold mb-8 text-white">£25.99</div>
                 
                 <!-- Removed rounded-lg -->
                 <a href="#" id="buy-now-link" class="w-full bg-red-600 hover:bg-red-500 text-white font-bold py-4 px-4 text-center text-xl transition duration-300">
