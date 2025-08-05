@@ -128,14 +128,11 @@
     <div id="home-page" class="page min-h-screen flex flex-col items-center justify-center p-4">
         <main id="model-container" class="w-full max-w-2xl h-[60vh] cursor-pointer">
             <!-- 
-                FIXED: 3D Model now references a .glb file for broad browser support
-                and your .usdz file for AR on iOS.
-                
-                ACTION REQUIRED: You must upload a .glb version of your model
-                (e.g., "pendant.glb") to your GitLab repo alongside your other files.
+                FIXED: The 3D model source is now set to your .glb file.
+                The ios-src points to your .usdz file for AR on Apple devices.
             -->
             <model-viewer 
-                src="pendant.glb"
+                src="25_08_04_03_43_31_520.glb"
                 ios-src="25_08_04_16_43_18_283.usdz"
                 alt="A 3D model of a pendant"
                 auto-rotate
