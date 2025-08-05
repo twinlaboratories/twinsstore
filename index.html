@@ -101,9 +101,9 @@
 <body class="bg-black text-white">
 
     <!-- Video Background -->
-    <video autoplay muted loop id="bg-video">
+    <video autoplay muted loop playsinline id="bg-video">
         <!-- 
-            TODO: Replace 'your-video.mp4' with the path to your video file.
+            The video source is set to your file.
         -->
         <source src="your-video.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -235,6 +235,15 @@
         }
 
         audioPlayerContainer.addEventListener('click', togglePlay);
+        
+        // --- Robust Video Autoplay ---
+        // This ensures the video tries to play when the page loads.
+        window.addEventListener('load', () => {
+            const video = document.getElementById('bg-video');
+            video.play().catch(error => {
+                console.error("Video autoplay was prevented by the browser:", error);
+            });
+        });
 
     </script>
 
