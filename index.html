@@ -113,13 +113,19 @@
     <header class="absolute top-0 left-0 p-6 z-50">
         <img src="Untitled 3.PNG" alt="Logo" class="h-12" onerror="this.onerror=null;this.src='https://placehold.co/150x50/ff0000/000000?text=LOGO';">
     </header>
-    <div id="audio-player-container">
+    <div id="audio-player-container" class="relative">
         <audio id="music-track" loop>
             <!-- Audio source updated to your .wav file -->
             <source src="FAM DEMO2.wav" type="audio/wav">
         </audio>
         <!-- Music player image updated to 2.PNG -->
         <img src="2.PNG" alt="Play" id="play-icon" onerror="this.onerror=null;this.src='https://placehold.co/48x48/ffffff/000000?text=PLAY';">
+        
+        <!-- Small play icon overlay -->
+        <svg id="small-play-overlay" class="absolute h-5 w-5 text-white bottom-1 right-1 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+        </svg>
+
         <svg id="pause-icon" class="hidden-icon" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
         </svg>
@@ -191,6 +197,7 @@
         const music = document.getElementById('music-track');
         const playIcon = document.getElementById('play-icon');
         const pauseIcon = document.getElementById('pause-icon');
+        const smallPlayOverlay = document.getElementById('small-play-overlay');
 
         // --- Page Navigation ---
         function showProductPage() {
@@ -227,6 +234,7 @@
                 try {
                     await music.play();
                     playIcon.classList.add('hidden-icon');
+                    smallPlayOverlay.classList.add('hidden-icon');
                     pauseIcon.classList.remove('hidden-icon');
                 } catch (error) {
                     console.error("Play request was interrupted:", error);
@@ -234,6 +242,7 @@
             } else {
                 music.pause();
                 playIcon.classList.remove('hidden-icon');
+                smallPlayOverlay.classList.remove('hidden-icon');
                 pauseIcon.classList.add('hidden-icon');
             }
         }
