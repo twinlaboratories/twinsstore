@@ -117,7 +117,8 @@
         <audio id="music-track" loop>
             <source src="your-music.mp3" type="audio/mpeg">
         </audio>
-        <img src="2.jpg" alt="Play" id="play-icon" onerror="this.onerror=null;this.src='https://placehold.co/48x48/ffffff/000000?text=PLAY';">
+        <!-- Music player image updated to 2.PNG -->
+        <img src="2.PNG" alt="Play" id="play-icon" onerror="this.onerror=null;this.src='https://placehold.co/48x48/ffffff/000000?text=PLAY';">
         <svg id="pause-icon" class="hidden-icon" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
         </svg>
@@ -126,8 +127,10 @@
     <!-- Home Page -->
     <div id="home-page" class="page min-h-screen flex flex-col items-center justify-center p-4">
         <main id="model-container" class="w-full max-w-2xl h-[60vh] cursor-pointer">
+            <!-- 3D Model updated to use your .usdz file -->
             <model-viewer 
-                src="pendant.glb"
+                src="25_08_04_16_43_18_283.usdz"
+                ios-src="25_08_04_16_43_18_283.usdz"
                 alt="A 3D model of a pendant"
                 auto-rotate
                 camera-controls
