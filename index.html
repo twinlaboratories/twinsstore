@@ -55,8 +55,9 @@
         }
         
         #play-icon, #pause-icon {
-            width: 48px; /* h-12 */
-            height: 48px; /* w-12 */
+            /* Size doubled from 48px to 96px */
+            width: 96px; /* h-24 */
+            height: 96px; /* w-24 */
             transition: opacity 0.2s ease-in-out;
         }
 
@@ -117,8 +118,8 @@
         <!-- Music player image updated to 2.PNG -->
         <img src="2.PNG" alt="Play" id="play-icon" onerror="this.onerror=null;this.src='https://placehold.co/48x48/ffffff/000000?text=PLAY';">
         
-        <!-- Small play icon overlay -->
-        <svg id="small-play-overlay" class="absolute h-5 w-5 text-white bottom-1 right-1 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <!-- Small play icon overlay - size and position doubled -->
+        <svg id="small-play-overlay" class="absolute h-10 w-10 text-white bottom-2 right-2 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
           <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
         </svg>
 
